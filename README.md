@@ -28,7 +28,7 @@ Simple <strong>LinkedIn</strong> login library for <strong>React-Native</strong>
 ## Installation
 
 ```bash
-$ yarn add react-native-linkedin
+$ yarn add @gcou/react-native-linkedin
 ```
 
 ## Security
