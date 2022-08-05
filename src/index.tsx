@@ -7,10 +7,11 @@ import {
   StyleSheet,
   Image,
 } from 'react-native'
-import { ViewPropTypes } from 'deprecated-react-native-prop-types';
+import { ViewPropTypes } from 'deprecated-react-native-prop-types'
 import { WebView } from 'react-native-webview'
 import PropTypes from 'prop-types'
 import { pipe, evolve, propSatisfies, applySpec, propOr, add } from 'ramda'
+import 'react-native-get-random-values'
 import { v4 } from 'uuid'
 import querystring from 'query-string'
 
