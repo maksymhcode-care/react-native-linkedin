@@ -118,7 +118,7 @@ export default class AppContainer extends React.Component<{}, State> {
   signOut = () => {
     this.setState({ refreshing: true })
     this.modal.current
-      .logoutAsync()
+      ?.logoutAsync()
       .then(() =>
         this.setState({ localizedFirstName: undefined, refreshing: false }),
       )
@@ -138,7 +138,7 @@ export default class AppContainer extends React.Component<{}, State> {
           />
           <Button
             title="Open from external"
-            onPress={() => this.modal.current.open()}
+            onPress={() => this.modal.current?.open()}
           />
         </View>
 

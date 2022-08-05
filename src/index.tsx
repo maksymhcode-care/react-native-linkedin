@@ -2,12 +2,12 @@ import React, { ReactNode } from 'react'
 import {
   TouchableOpacity,
   View,
-  ViewPropTypes,
   Text,
   Modal,
   StyleSheet,
   Image,
 } from 'react-native'
+import { ViewPropTypes } from 'deprecated-react-native-prop-types';
 import { WebView } from 'react-native-webview'
 import PropTypes from 'prop-types'
 import { pipe, evolve, propSatisfies, applySpec, propOr, add } from 'ramda'
@@ -49,9 +49,9 @@ interface Props {
   closeStyle?: any
   animationType?: 'none' | 'fade' | 'slide'
   areaTouchText: {
-    top?: number, 
-    bottom?: number, 
-    left?: number, 
+    top?: number,
+    bottom?: number,
+    left?: number,
     right?: number
   }
   shouldGetAccessToken?: boolean
@@ -97,12 +97,14 @@ export const injectedJavaScript = `
   true;
 `
 
-export const getAuthorizationUrl = ({
-  authState,
-  clientID,
-  permissions,
-  redirectUri,
-}: Partial<Props>) =>
+export const getAuthorizationUrl = (
+  {
+    authState,
+    clientID,
+    permissions,
+    redirectUri,
+  }: Partial<Props>
+) =>
   `${AUTHORIZATION_URL}?${querystring.stringify({
     response_type: 'code',
     client_id: clientID,
@@ -111,12 +113,14 @@ export const getAuthorizationUrl = ({
     redirect_uri: redirectUri,
   })}`
 
-export const getPayloadForToken = ({
-  clientID,
-  clientSecret,
-  code,
-  redirectUri,
-}: Partial<Props> & { code: string }) =>
+export const getPayloadForToken = (
+  {
+    clientID,
+    clientSecret,
+    code,
+    redirectUri,
+  }: Partial<Props> & { code: string }
+) =>
   querystring.stringify({
     grant_type: 'authorization_code',
     code,
@@ -299,7 +303,7 @@ export default class LinkedInModal extends React.Component<Props, State> {
   }
 
   logoutAsync = () =>
-    new Promise(resolve => {
+    new Promise<void>(resolve => {
       this.setState({ logout: true })
       setTimeout(() => {
         this.setState({ logout: false })
@@ -311,20 +315,20 @@ export default class LinkedInModal extends React.Component<Props, State> {
     const { renderButton, linkText, areaTouchText, isDisabled = false } = this.props
     if (renderButton) {
       return(
-        <TouchableOpacity  
-        accessibilityComponentType={'button'}
-        accessibilityTraits={['button']}
-        onPress={this.open}
-        hitSlop={areaTouchText} 
-        disabled={isDisabled}>
+        <TouchableOpacity
+          accessibilityRole={'button'}
+          accessibilityState={{disabled: isDisabled}}
+          onPress={this.open}
+          hitSlop={areaTouchText}
+          disabled={isDisabled}>
           {renderButton()}
         </TouchableOpacity>
       )
     }
     return (
       <TouchableOpacity
-        accessibilityComponentType={'button'}
-        accessibilityTraits={['button']}
+        accessibilityRole={'button'}
+        accessibilityState={{disabled: isDisabled}}
         onPress={this.open}
         hitSlop={areaTouchText}
         disabled={isDisabled}
@@ -394,8 +398,7 @@ export default class LinkedInModal extends React.Component<Props, State> {
             <TouchableOpacity
               onPress={this.close}
               style={[styles.close, closeStyle]}
-              accessibilityComponentType={'button'}
-              accessibilityTraits={['button']}
+              accessibilityRole={'button'}
             >
               {this.renderClose()}
             </TouchableOpacity>

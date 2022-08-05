@@ -1,18 +1,18 @@
 {
-  "name": "@smuxx/react-native-linkedin",
-  "version": "2.1.1",
+  "name": "@gaelco/react-native-linkedin",
+  "version": "2.1.2",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
-  "description": "React-Native LinkedIn, a simple LinkedIn login library for React-Native with WebView and Modal",
+  "description": "React-Native LinkedIn, a simple LinkedIn login library for React-Native with WebView and Modal - oompatiblity wiht RN 0.69",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/smuxx/react-native-linkedin.git"
   },
   "author": "Xavier Carpentier <xcapetir@gmail.com> (https://xaviercarpentier.com/)",
   "bugs": {
-    "url": "https://github.com/smuxx/react-native-linkedin/issues"
+    "url": "https://github.com/GaelCO/react-native-linkedin/issues"
   },
-  "homepage": "https://github.com/smuxx/react-native-linkedin",
+  "homepage": "https://github.com/GaelCO/react-native-linkedin",
   "license": "MIT",
   "scripts": {
     "start": "yarn config:dev && expo start",
@@ -30,29 +30,30 @@
     "linkedin"
   ],
   "dependencies": {
-    "query-string": "6.8.3",
-    "ramda": "0.26.1",
-    "uuid": "3.3.3"
+    "deprecated-react-native-prop-types": "^2.3.0",
+    "query-string": "7.1.1",
+    "ramda": "0.28.0",
+    "uuid": "8.3.2"
   },
   "devDependencies": {
-    "@types/jest": "24.0.17",
-    "@types/ramda": "^0.25.47",
-    "@types/react": "~16.9.35",
-    "@types/react-native": "~0.63.2",
-    "@types/uuid": "^3.4.4",
-    "babel-jest": "24.9.0",
-    "babel-preset-expo": "^8.3.0",
+    "@types/jest": "28.1.6",
+    "@types/ramda": "^0.28.15",
+    "@types/react": "~18.0.15",
+    "@types/react-native": "~0.69.5",
+    "@types/uuid": "^8.3.4",
+    "babel-jest": "28.1.3",
+    "babel-preset-expo": "^9.2.0",
     "babel-preset-react-native": "^4.0.0",
-    "expo": "^39.0.0",
-    "jest-expo": "^39.0.0",
-    "json": "^9.0.6",
-    "react": "16.13.1",
-    "react-native": "0.63.3",
-    "react-native-webview": "10.7.0",
-    "react-test-renderer": "16.8.3",
-    "tslint": "5.12.0",
-    "tslint-config-prettier": "1.17.0",
-    "typescript": "~3.9.2"
+    "expo": "^46.0.2",
+    "jest-expo": "^46.0.1",
+    "json": "^11.0.0",
+    "react": "18.2.0",
+    "react-native": "0.69.3",
+    "react-native-webview": "11.23.0",
+    "react-test-renderer": "18.2.0",
+    "tslint": "6.1.3",
+    "tslint-config-prettier": "1.18.0",
+    "typescript": "~4.7.4"
   },
   "peerDependencies": {
     "react": "*",
