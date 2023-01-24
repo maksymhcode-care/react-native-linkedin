@@ -5,12 +5,18 @@
 <h4> Fork Changes </h4>
  <p> Forked from https://github.com/GaelCO/react-native-linkedin</p>
  <p>Fixed Native Modules not found error in react native 0.70.0</p> 
-  Instructions:
-  <p># Install the package, Run  <code> yarn add react-native-get-random-values</code> </p>
-  <p># Add <code> import 'react-native-get-random-values'</code>  in index.js below import App.js</p>
-  <p># gradlew clean</p>
-  <p># yarn android</p> 
-</p>
+ <p> Instructions:</p>
+ <ul>
+  <li> # Install the package, Run  <code> yarn add react-native-get-random-values</code> 
+  </li>
+  <li>
+    # Add <code> import 'react-native-get-random-values'</code>  in index.js below import App.js</p>
+  </li>
+  <li>
+    # gradlew clean
+  </li>
+  <li># yarn android</li>
+ </ul>
 
 <h3 align="center">
   🔗 React-Native LinkedIn
@@ -38,7 +44,7 @@ Simple <strong>LinkedIn</strong> login library for <strong>React-Native</strong>
 ## Installation
 
 ```bash
-$ yarn add @gcou/react-native-linkedin
+$ yarn add @symhomendra21/react-native-linkedin
 ```
 
 ## Security
