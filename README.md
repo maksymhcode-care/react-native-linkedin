@@ -3,14 +3,14 @@
 </p>
 
 <h4> Fork Changes </h4>
- <p> Forked from https://github.com/GaelCO/react-native-linkedin
+ <pre> Forked from https://github.com/GaelCO/react-native-linkedin
   Fixed Native Modules not found error in react native 0.70.0
   Instructions:
   # Run  <code> yarn add react-native-get-random-values</code> 
   # Add <code> import 'react-native-get-random-values'</code>  in index.js below import App.js
   # gradlew clean
   # yarn android
-</p>
+</pre>
 
 <h3 align="center">
   🔗 React-Native LinkedIn
