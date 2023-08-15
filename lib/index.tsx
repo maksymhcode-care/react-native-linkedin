@@ -221,7 +221,7 @@ export default class LinkedInModal extends React.Component<Props, State> {
   };
   static defaultProps = {
     onError: logError,
-    permissions: ["r_liteprofile", "r_emailaddress"],
+    permissions: ["openid", "profile", "email"],
     linkText: "Login with LinkedIn",
     areaTouchText: { top: 20, bottom: 20, left: 50, right: 50 },
     animationType: "fade",
